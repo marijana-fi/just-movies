@@ -8,8 +8,8 @@ a,
 input,
 li,
 span {
-   color: #fff;
-   margin-bottom: 0;
+	color: #fff;
+	margin-bottom: 0;
 }
 
 h1,
@@ -17,111 +17,111 @@ h2,
 h3,
 h4,
 p {
-   color: #fff;
+	color: #fff;
 }
 p {
-   font-weight: 300;
-   font-size: 14px;
-   line-height: 1.6;
-   @media (max-width: 768px) {
-      font-size: 12px;
-   }
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 1.6;
+	@media (max-width: 768px) {
+		font-size: 12px;
+	}
 
-   @media (max-width: 460px) {
-      line-height: 1.2;
-      font-size: 11px;
-   }
+	@media (max-width: 460px) {
+		line-height: 1.2;
+		font-size: 11px;
+	}
 }
 
 h2 {
-   font-size: 80px;
-   font-weight: 700;
-   margin-bottom: 30px;
+	font-size: 80px;
+	font-weight: 700;
+	margin-bottom: 30px;
 
-   @media (max-width: 768px) {
-      font-size: 60px;
-   }
-   @media (max-width: 460px) {
-      font-size: 30px;
-      margin-bottom: 10px;
-   }
+	@media (max-width: 768px) {
+		font-size: 60px;
+	}
+	@media (max-width: 460px) {
+		font-size: 30px;
+		margin-bottom: 10px;
+	}
 }
 
 h3 {
-   font-size: 16px;
-   font-weight: 300;
+	font-size: 16px;
+	font-weight: 300;
 
-   @media (max-width: 768px) {
-      font-size: 14px;
-   }
-   @media (max-width: 460px) {
-      font-size: 11px;
-   }
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+	@media (max-width: 460px) {
+		font-size: 11px;
+	}
 }
 
 h4 {
-   font-size: 16px;
-   font-weight: 400;
-   @media (max-width: 768px) {
-      font-size: 14px;
-   }
-   @media (max-width: 460px) {
-      font-size: 12px;
-   }
+	font-size: 16px;
+	font-weight: 400;
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+	@media (max-width: 460px) {
+		font-size: 12px;
+	}
 }
 h5 {
-   font-size: 16px;
-   font-weight: 400;
-   margin-bottom: 10px;
-   @media (max-width: 768px) {
-      font-size: 13px;
-   }
-   @media (max-width: 460px) {
-      font-size: 12px;
-   }
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 10px;
+	@media (max-width: 768px) {
+		font-size: 13px;
+	}
+	@media (max-width: 460px) {
+		font-size: 12px;
+	}
 }
 h6 {
-   font-size: 15px;
-   font-weight: 300;
-   font-style: italic;
-   @media (max-width: 768px) {
-      font-size: 14px;
-   }
-   @media (max-width: 460px) {
-      font-size: 11px;
-   }
+	font-size: 15px;
+	font-weight: 300;
+	font-style: italic;
+	@media (max-width: 768px) {
+		font-size: 14px;
+	}
+	@media (max-width: 460px) {
+		font-size: 11px;
+	}
 }
 a {
-   display: block;
-   font-size: 14px;
-   position: relative;
-   text-decoration: none;
+	display: block;
+	font-size: 14px;
+	position: relative;
+	text-decoration: none;
 
-   @media (max-width: 460px) {
-      font-size: 11px;
-   }
-   &:focus {
-
-   }
+	@media (max-width: 460px) {
+		font-size: 11px;
+	}
+	&:focus {
+		outline: 1px solid var(--border-color);
+	}
 }
 li {
-   display: inline-block;
-   margin-right: 20px;
-   font-size: 14px;
-   @media (max-width: 460px) {
-      font-size: 12px;
-   }
-   &:last-of-type {
-      margin-right: 0;
-   }
+	display: inline-block;
+	margin-right: 20px;
+	font-size: 14px;
+	@media (max-width: 460px) {
+		font-size: 12px;
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
 }
 span {
-   font-size: 15px;
-   font-weight: 300;
-   @media (max-width: 768px) {
-      font-size: 13px;
-   }
-   @media (max-width: 460px) {
-      font-size: 11px;
-   }
+	font-size: 15px;
+	font-weight: 300;
+	@media (max-width: 768px) {
+		font-size: 13px;
+	}
+	@media (max-width: 460px) {
+		font-size: 11px;
+	}
 }
