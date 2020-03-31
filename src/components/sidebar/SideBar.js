@@ -89,7 +89,7 @@ class SideBar extends React.Component {
 					</Link>
 
 					<ul className="side-list">
-						<Link to={`${process.env.PUBLIC_URL}/top_rated`}>
+						<Link to="/top_rated">
 							<li
 								className={`list-item ${
 									path === "movie/top_rated" ? "active" : ""
@@ -101,7 +101,7 @@ class SideBar extends React.Component {
 								Top Rated
 							</li>
 						</Link>
-						<Link to={`${process.env.PUBLIC_URL}/upcoming`}>
+						<Link to="/upcoming">
 							<li
 								className={`list-item ${
 									path === "movie/upcoming" ? "active" : ""
@@ -113,7 +113,7 @@ class SideBar extends React.Component {
 								Upcoming
 							</li>
 						</Link>
-						<Link to={`${process.env.PUBLIC_URL}/favorites`}>
+						<Link to="/favorites">
 							<li
 								className={`list-item ${
 									path === "movie/favorites" ? "active" : ""
