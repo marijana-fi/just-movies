@@ -174,14 +174,14 @@ class App extends React.Component {
 				<Provider value={this.state}>
 					<Router>
 						<Home
-							path="/"
+							path={`${process.env.PUBLIC_URL}/`}
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 							fetchMovies={this.fetchMovies}
 							resetGenreName={this.resetGenreName}
 						/>
 						<MovieDetails
-							path="/movie/:id"
+							path={`${process.env.PUBLIC_URL}/movie/:id`}
 							movieData={this.state}
 							loading={this.state.loading}
 							addToFavorites={this.addToFavorites}
@@ -190,26 +190,26 @@ class App extends React.Component {
 							setSort={this.setSort}
 						/>
 						<Home
-							path="/:activePath"
+							path={`${process.env.PUBLIC_URL}/:activePath`}
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 							fetchMovies={this.fetchMovies}
 							resetGenreName={this.resetGenreName}
 						/>
 						<GenreResults
-							path="/genres/:id"
+							path={`${process.env.PUBLIC_URL}/genres/:id`}
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 							getGenre={this.getGenre}
 							setSort={this.setSort}
 						/>
 						<SearchResults
-							path="/search"
+							path={`${process.env.PUBLIC_URL}/search`}
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 						/>
 						<Favorites
-							path="/favorites"
+							path={`${process.env.PUBLIC_URL}/favorites`}
 							data={this.state}
 							loadFavoritesFromLocalStorage={
 								this.loadFavoritesFromLocalStorage
