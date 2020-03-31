@@ -139,7 +139,7 @@ class MovieDetails extends React.Component {
                            <button className="play blurred" onClick={this.handleTrailerClick}>
                               Play trailer
                               <span>
-                                 <img src="/img/play-icon.svg" alt="play trailer" />
+                                 <img src="img/play-icon.svg" alt="play trailer" />
                               </span>
                            </button>
                         ) : (
@@ -165,7 +165,7 @@ class MovieDetails extends React.Component {
                   <div className="movie-details">
                      <h4>
                         <span className="star">
-                           <img src="/img/star-icon.svg" alt="review" />
+                           <img src="img/star-icon.svg" alt="review" />
                         </span>
                         {vote_average}
                      </h4>
@@ -180,7 +180,7 @@ class MovieDetails extends React.Component {
                      <button className="no-style" onClick={this.handleFavClick}>
                         <span className={`icon favorite ${this.state.isFavorite ? "pop" : ""}`}>
                            <img
-                              src={this.state.isFavorite ? "/img/heart-fill-white.svg" : "/img/heart-outline-white.svg"}
+                              src={this.state.isFavorite ? "img/heart-fill-white.svg" : "img/heart-outline-white.svg"}
                               alt="add to favorites"
                            />
                         </span>

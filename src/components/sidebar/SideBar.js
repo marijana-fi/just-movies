@@ -84,7 +84,7 @@ class SideBar extends React.Component {
 								this.handleLinkClick("discover/movie");
 							}}
 						>
-							<img src="/img/moviez-logo.svg" alt="logo" />
+							<img src="img/moviez-logo.svg" alt="logo" />
 						</div>
 					</Link>
 
