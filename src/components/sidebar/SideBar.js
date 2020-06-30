@@ -12,18 +12,18 @@ class SideBar extends React.Component {
 		defaultSort: { label: "Popularity", value: "popularity.desc" },
 		selectedGenre: {
 			label: "",
-			value: null
+			value: null,
 		},
-		activePage: ""
+		activePage: "",
 	};
 
 	static getDerivedStateFromProps(props) {
 		return {
 			selectedGenre: {
 				label: props.data.activeGenreName,
-				value: props.data.activeGenre
+				value: props.data.activeGenre,
 			},
-			loading: false
+			loading: false,
 		};
 	}
 
@@ -32,12 +32,12 @@ class SideBar extends React.Component {
 	}
 
 	getGenreList = async () => {
-		api.genreList().then(data => {
+		api.genreList().then((data) => {
 			this.setState({
 				options: data.genres.map(({ id, name }) => ({
 					value: id,
-					label: name
-				}))
+					label: name,
+				})),
 			});
 		});
 	};
@@ -46,12 +46,12 @@ class SideBar extends React.Component {
 		this.props.toggleMenu();
 	};
 
-	handleLinkClick = path => {
+	handleLinkClick = (path) => {
 		this.props.setActivePath(path);
 		this.props.toggleMenu();
 	};
 
-	handleSelectChange = genre => {
+	handleSelectChange = (genre) => {
 		navigate(`/genres/${genre.value}-${genre.label}`);
 
 		this.props.getGenre(
@@ -77,7 +77,7 @@ class SideBar extends React.Component {
 						this.props.isMenuVisible ? "show-sidebar" : ""
 					}`}
 				>
-					<Link to={`${process.env.PUBLIC_URL}/`}>
+					<Link to="/">
 						<div
 							className="logo-wrap"
 							onClick={() => {
@@ -141,14 +141,14 @@ class SideBar extends React.Component {
 						classNamePrefix="select-item"
 						openMenuOnFocus="true"
 						value={this.state.selectedGenre}
-						theme={theme => ({
+						theme={(theme) => ({
 							...theme,
 							borderRadius: 0,
 							colors: {
 								...theme.colors,
 								primary25: "#1e142c",
-								primary: "#11081d"
-							}
+								primary: "#11081d",
+							},
 						})}
 					/>
 				</aside>

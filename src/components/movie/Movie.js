@@ -11,7 +11,7 @@ class Movie extends React.Component {
 			vote_average,
 			release_date,
 			poster_path,
-			id
+			id,
 		} = this.props.movie;
 
 		const date = new Date(release_date).getFullYear();
@@ -19,7 +19,7 @@ class Movie extends React.Component {
 		return this.props.loading ? (
 			<Loader />
 		) : (
-			<Link to={`${process.env.PUBLIC_URL}/movie/${id}`}>
+			<Link to={`/movie/${id}`}>
 				<div className="movie-wrap">
 					<div className="img-wrap">
 						<Img

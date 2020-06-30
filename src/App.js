@@ -28,7 +28,7 @@ class App extends React.Component {
 			searchQuery: "",
 			handleLoadMore: this.handleLoadMore,
 			stopLoading: this.stopLoading,
-			sortBy: { label: "Popularity", value: "popularity.desc" }
+			sortBy: { label: "Popularity", value: "popularity.desc" },
 		};
 	}
 
@@ -44,7 +44,7 @@ class App extends React.Component {
 		this.setState({ isMenuVisible: !this.state.isMenuVisible });
 	};
 
-	addToFavorites = movie => {
+	addToFavorites = (movie) => {
 		this.setState({ favorites: [...this.state.favorites, movie] }, () => {
 			localStorage.setItem(
 				"movies",
@@ -52,14 +52,16 @@ class App extends React.Component {
 			);
 		});
 
-		if (this.state.favorites.some(item => item.id === movie.id)) {
+		if (this.state.favorites.some((item) => item.id === movie.id)) {
 			this.removeFromFavorites(movie);
 		}
 	};
 
-	removeFromFavorites = movie => {
+	removeFromFavorites = (movie) => {
 		this.setState({
-			favorites: this.state.favorites.filter(item => item.id !== movie.id)
+			favorites: this.state.favorites.filter(
+				(item) => item.id !== movie.id
+			),
 		});
 	};
 
@@ -68,64 +70,64 @@ class App extends React.Component {
 		if (favorites) {
 			this.setState({
 				favorites: favorites,
-				loading: false
+				loading: false,
 			});
 		}
 	};
 
-	fetchMovies = path => {
-		api.movies(path).then(data =>
+	fetchMovies = (path) => {
+		api.movies(path).then((data) =>
 			this.setState({
 				movies: data.results,
 				page: 1,
 				totalPages: data.total_pages,
 				activePath: path,
 				singleMovie: {},
-				loading: false
+				loading: false,
 			})
 		);
 		window.scrollTo(0, 0);
 	};
 
-	searchMovies = q => {
-		api.search(q).then(data =>
+	searchMovies = (q) => {
+		api.search(q).then((data) =>
 			this.setState({
 				movies: data.results,
 				page: 1,
 				totalPages: data.total_pages,
-				activePath: "search/movie"
+				activePath: "search/movie",
 			})
 		);
 	};
 
 	getGenre = (id, label, sortValue) => {
-		api.moviesByGenre(id, sortValue).then(data => {
+		api.moviesByGenre(id, sortValue).then((data) => {
 			this.setState({
 				movies: data.results,
 				activePath: "discover/movie",
 				activeGenre: parseInt(id),
 				activeGenreName: label,
-				loading: false
+				loading: false,
 			});
 		});
 	};
 
-	updateSearchValue = value => {
+	updateSearchValue = (value) => {
 		this.setState({ searchQuery: value });
 	};
 
 	resetGenreName = () => {
 		this.setState({
 			activeGenreName: "Select genre",
-			activeGenre: ""
+			activeGenre: "",
 		});
 	};
 
-	setSort = sortValue => {
+	setSort = (sortValue) => {
 		this.setState({ sortBy: sortValue });
 	};
 
-	setActivePath = activePath => {
+	setActivePath = (activePath) => {
 		this.setState({ activePath });
 	};
 
@@ -134,16 +136,16 @@ class App extends React.Component {
 
 		this.setState(
 			{
-				page: page === totalPages ? totalPages : page + 1
+				page: page === totalPages ? totalPages : page + 1,
 			},
 			() => {
 				const page = `&page=${this.state.page}`;
 				const { activePath, searchQuery, activeGenre } = this.state;
 
 				api.loadMore(activePath, searchQuery, page, activeGenre).then(
-					data =>
+					(data) =>
 						this.setState({
-							movies: [...this.state.movies, ...data.results]
+							movies: [...this.state.movies, ...data.results],
 						})
 				);
 			}
@@ -174,14 +176,14 @@ class App extends React.Component {
 				<Provider value={this.state}>
 					<Router>
 						<Home
-							path={`${process.env.PUBLIC_URL}/`}
+							path="/"
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 							fetchMovies={this.fetchMovies}
 							resetGenreName={this.resetGenreName}
 						/>
 						<MovieDetails
-							path={`${process.env.PUBLIC_URL}/movie/:id`}
+							path="/movie/:id"
 							movieData={this.state}
 							loading={this.state.loading}
 							addToFavorites={this.addToFavorites}
@@ -190,26 +192,26 @@ class App extends React.Component {
 							setSort={this.setSort}
 						/>
 						<Home
-							path={`${process.env.PUBLIC_URL}/:activePath`}
+							path="/:activePath"
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 							fetchMovies={this.fetchMovies}
 							resetGenreName={this.resetGenreName}
 						/>
 						<GenreResults
-							path={`${process.env.PUBLIC_URL}/genres/:id`}
+							path="/genres/:id"
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 							getGenre={this.getGenre}
 							setSort={this.setSort}
 						/>
 						<SearchResults
-							path={`${process.env.PUBLIC_URL}/search`}
+							path="/search"
 							data={this.state}
 							handleLoadMore={this.handleLoadMore}
 						/>
 						<Favorites
-							path={`${process.env.PUBLIC_URL}/favorites`}
+							path="/favorites"
 							data={this.state}
 							loadFavoritesFromLocalStorage={
 								this.loadFavoritesFromLocalStorage
