@@ -46,14 +46,17 @@ class Movie extends React.Component {
 						<div className="movie-info">
 							<h3>
 								<span className="icon">
-									<img src="img/star-icon.svg" alt="review" />
+									<img
+										src="/img/star-icon.svg"
+										alt="review"
+									/>
 								</span>
 								{vote_average}
 							</h3>
 							<h3>
 								<span className="icon calendar">
 									<img
-										src="img/calendar-icon.svg"
+										src="/img/calendar-icon.svg"
 										alt="calendar"
 									/>
 								</span>

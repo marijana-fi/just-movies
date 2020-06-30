@@ -57,7 +57,7 @@ class Header extends React.Component {
 					}
 				>
 					{" "}
-					<img src="img/logo-mobile.svg" alt="logo" />
+					<img src="/img/logo-mobile.svg" alt="logo" />
 				</div>
 				<div
 					className={`search-wrap blurred ${
@@ -65,7 +65,7 @@ class Header extends React.Component {
 					} ${isFocused ? "focused" : ""}`}
 				>
 					<span className="icon">
-						<img src="img/search-icon.svg" alt="search" />
+						<img src="/img/search-icon.svg" alt="search" />
 					</span>
 					<form
 						action=""
