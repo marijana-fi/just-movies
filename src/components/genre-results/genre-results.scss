@@ -1,6 +1,8 @@
 .sort-list {
-   margin-left: 320px;
-   max-width: 220px;
-   padding: 90px 10px 10px 20px;
-
+	margin-left: 320px;
+	max-width: 220px;
+	padding: 90px 10px 10px 20px;
+	@media (max-width: 768px) {
+		margin-left: calc(100vw - 220px);
+	}
 }
