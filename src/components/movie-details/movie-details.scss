@@ -80,6 +80,10 @@
 			left: 0;
 			top: 200px;
 			width: 100%;
+			h5 {
+				font-weight: 600;
+				margin-bottom: 20px;
+			}
 			.title-wrap {
 				z-index: 1;
 				width: 60%;
@@ -100,6 +104,7 @@
 				}
 				.desc {
 					margin-bottom: 40px;
+					max-width: 640px;
 				}
 
 				.trailer {
@@ -131,7 +136,7 @@
 				display: flex;
 				flex-wrap: wrap;
 				align-items: center;
-				margin-bottom: 30px;
+				margin-bottom: 40px;
 				h4 {
 					font-size: 40px;
 					font-weight: 700;
