@@ -6,7 +6,7 @@ Data fetched from TMDb API.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Project live on [Netlify](https://just-movies.netlify.app/)
+Project live on [Netlify](https://just-movies.netlify.app/).
 
 
 
