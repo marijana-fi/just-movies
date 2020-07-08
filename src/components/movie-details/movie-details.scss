@@ -98,7 +98,6 @@
 					margin-bottom: 20px;
 					.blurred {
 						margin-right: 10px;
-						font-size: 13px;
 						margin-bottom: 10px;
 					}
 				}
@@ -234,7 +233,7 @@
 								margin-bottom: 10px;
 							}
 							.character {
-								font-size: 11px;
+								font-size: 14px;
 							}
 						}
 					}
@@ -340,8 +339,6 @@
 					.trailer {
 						.play {
 							padding: 10px 15px;
-							span {
-							}
 						}
 					}
 					.genre-list {
@@ -402,7 +399,7 @@
 					.trailer {
 						.play {
 							padding: 5px 10px;
-							font-size: 12px;
+
 							span {
 								img {
 									max-width: 10px;
@@ -439,13 +436,6 @@
 							auto-fill,
 							minmax(110px, 1fr)
 						);
-						.cast-card {
-							.cast-info {
-								.character {
-									font-size: 11px;
-								}
-							}
-						}
 					}
 				}
 			}

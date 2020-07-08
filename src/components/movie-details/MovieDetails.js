@@ -198,12 +198,10 @@ class MovieDetails extends React.Component {
 							</h4>
 							<h4>{date}</h4>
 
-							{/*<span>*/}
-							{/*   Runtime:{" "}*/}
 							<h4>
 								{hours} hr {min} min
 							</h4>
-							{/*</span>*/}
+
 							<button
 								className="no-style"
 								onClick={this.handleFavClick}
@@ -233,7 +231,11 @@ class MovieDetails extends React.Component {
 							<span>
 								{[
 									...new Set(
-										writer.map((crew) => `${crew.name}, `)
+										writer.map((crew, i) => {
+											return writer.length - 1 === i
+												? crew.name
+												: `${crew.name}, `;
+										})
 									),
 								]}
 							</span>

@@ -21,14 +21,10 @@ p {
 }
 p {
 	font-weight: 300;
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.6;
 	@media (max-width: 768px) {
-		font-size: 12px;
-	}
-
-	@media (max-width: 460px) {
-		line-height: 1.6;
+		font-size: 14px;
 	}
 }
 
@@ -53,9 +49,6 @@ h3 {
 	@media (max-width: 768px) {
 		font-size: 14px;
 	}
-	@media (max-width: 460px) {
-		font-size: 11px;
-	}
 }
 
 h4 {
@@ -65,9 +58,6 @@ h4 {
 	@media (max-width: 768px) {
 		font-size: 14px;
 	}
-	@media (max-width: 460px) {
-		font-size: 12px;
-	}
 }
 h5 {
 	font-size: 16px;
@@ -75,10 +65,7 @@ h5 {
 	margin-bottom: 10px;
 	line-height: 1.2;
 	@media (max-width: 768px) {
-		font-size: 13px;
-	}
-	@media (max-width: 460px) {
-		font-size: 12px;
+		font-size: 14px;
 	}
 }
 h6 {
@@ -88,9 +75,6 @@ h6 {
 	@media (max-width: 768px) {
 		font-size: 14px;
 	}
-	@media (max-width: 460px) {
-		font-size: 11px;
-	}
 }
 a {
 	display: block;
@@ -98,9 +82,6 @@ a {
 	position: relative;
 	text-decoration: none;
 
-	@media (max-width: 460px) {
-		font-size: 11px;
-	}
 	&:focus {
 		outline: 1px solid var(--border-color);
 	}
@@ -108,10 +89,8 @@ a {
 li {
 	display: inline-block;
 	margin-right: 20px;
-	font-size: 14px;
-	@media (max-width: 460px) {
-		font-size: 12px;
-	}
+	font-size: 15px;
+
 	&:last-of-type {
 		margin-right: 0;
 	}
@@ -119,10 +98,4 @@ li {
 span {
 	font-size: 15px;
 	font-weight: 300;
-	@media (max-width: 768px) {
-		font-size: 13px;
-	}
-	@media (max-width: 460px) {
-		font-size: 11px;
-	}
 }

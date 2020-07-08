@@ -5,6 +5,7 @@
 }
 body {
 	background: var(--main-bg-color);
+	font-size: 16px;
 }
 .no-style {
 	background: transparent;
@@ -35,7 +36,6 @@ button:focus {
 	}
 	@media (max-width: 768px) {
 		padding: 6px 12px;
-		font-size: 12px;
 	}
 }
 .search-text {
@@ -46,12 +46,7 @@ button:focus {
 	}
 	h4 {
 		font-size: 15px;
-		@media (max-width: 768px) {
-			font-size: 11px;
-			span {
-				font-size: 12px;
-			}
-		}
+
 		font-weight: 300;
 		span {
 			background: var(--border-color);
@@ -72,10 +67,10 @@ button:focus {
 				padding: 4px 5px 4px 15px;
 			}
 			&__value-container {
-				font-size: 12px;
+				font-size: 13px;
 			}
 			&__menu {
-				font-size: 12px;
+				font-size: 13px;
 				border-radius: 6px;
 				box-shadow: 0 6px 20px 0 var(--main-bg-color);
 			}
@@ -97,6 +92,7 @@ button:focus {
 			color: #fff;
 			margin: 0;
 			overflow: visible;
+			font-size: 15px;
 		}
 		&__input {
 			color: #fff;
@@ -150,15 +146,6 @@ button:focus {
 			color: #fff;
 			font-size: 13px;
 			width: 100%;
-		}
-	}
-}
-@media (max-width: 460px) {
-	.select {
-		.select-item {
-			&__value-container {
-				font-size: 12px;
-			}
 		}
 	}
 }
