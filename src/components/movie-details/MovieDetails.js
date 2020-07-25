@@ -217,7 +217,11 @@ class MovieDetails extends React.Component {
 												? "img/heart-fill-white.svg"
 												: "img/heart-outline-white.svg"
 										}
-										alt="add to favorites"
+										alt={
+											this.state.isFavorite
+												? "remove from favorites"
+												: "add to favorites"
+										}
 									/>
 								</span>
 							</button>
